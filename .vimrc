@@ -12,9 +12,7 @@ set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal noexpandtab
 
 " display Hard tab
-set list
-"set listchars=tab:>.,eol:$,trail:_,extends:\
-set listchars=tab:>-
+set list listchars=tab:>-
 
 " deisplay Zenkaku Space
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
