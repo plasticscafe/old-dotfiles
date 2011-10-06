@@ -3,14 +3,25 @@ if filereadable($HOME . '/.vim/local/.vimrc_local_pre')
     source ~/.vim/local/.vimrc_local_pre
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vundle setting
-set nocompatible
-filetype off
+" neobundle setting
+"
+if has('vim_starting')
+    execute 'set runtimepath+=' . expand('~/.vim/bundle/neobundle.vim')
+    filetype off
+    call neobundle#rc(expand('~/.vim/bundle'))
+    filetype plugin on
+    filetype indent on
+endif
 
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()  
-
-filetype plugin indent on
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
 
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
