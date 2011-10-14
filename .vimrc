@@ -1,3 +1,8 @@
+" local setting pre load
+if filereadable($HOME . '/.vim/local/.vimrc_local_pre')
+    source ~/.vim/local/.vimrc_local_pre
+endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle setting
 set nocompatible
 filetype off
@@ -17,3 +22,9 @@ set list listchars=tab:>-
 " deisplay Zenkaku Space
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" local setting post load
+if filereadable($HOME . '/.vim/local/.vimrc_local_post')
+    source ~/.vim/local/.vimrc_local_post
+endif
