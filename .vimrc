@@ -10,6 +10,9 @@ noremap! ^? ^H
 "noremap ^H
 "noremap! ^H
 set backspace=2
+" status line
+set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}][LINE:%l/%L]
+set laststatus=2 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting pre load
 if filereadable($HOME . '/.vim/local/.vimrc_local_pre')
