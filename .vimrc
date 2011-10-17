@@ -1,19 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" basic setting
-"
-set nocompatible
-syntax on
-set showmatch 
-" backspace
-noremap ^? ^H
-noremap! ^? ^H
-"noremap ^H
-"noremap! ^H
-set backspace=2
-" status line
-set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}][LINE:%l/%L]
-set laststatus=2 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting pre load
 if filereadable($HOME . '/.vim/local/.vimrc_local_pre')
     source ~/.vim/local/.vimrc_local_pre
@@ -38,6 +23,23 @@ NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" basic setting
+"
+set nocompatible
+syntax on
+set showmatch 
+
+" backspace
+noremap ^? ^H
+noremap! ^? ^H
+"noremap ^H
+"noremap! ^H
+set backspace=2
+
+" status line
+set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}][LINE:%l/%L]
+set laststatus=2 
 
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
