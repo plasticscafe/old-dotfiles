@@ -1,3 +1,16 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" basic setting
+"
+set nocompatible
+syntax on
+set showmatch 
+" backspace
+noremap ^? ^H
+noremap! ^? ^H
+"noremap ^H
+"noremap! ^H
+set backspace=2
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting pre load
 if filereadable($HOME . '/.vim/local/.vimrc_local_pre')
     source ~/.vim/local/.vimrc_local_pre
