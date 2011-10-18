@@ -52,6 +52,15 @@ set list listchars=tab:>-
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
 
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_underbar_completion = 1
+
+" unite
+let g:unite_cursor_line_highlight = 'Search'
+let g:unite_abbr_highlight = 'StatusLine'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting post load
 if filereadable($HOME . '/.vim/local/.vimrc_local_post')
