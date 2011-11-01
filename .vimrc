@@ -61,6 +61,11 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:unite_cursor_line_highlight = 'Search'
 let g:unite_abbr_highlight = 'StatusLine'
 
+" vimshell
+let g:vimshell_prompt = '% '
+let g:vimshell_user_prompt = 'getcwd()'
+let g:vimshell_right_prompt = 'strftime("%Y/%m/%d %H:%M:%S")'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting post load
 if filereadable($HOME . '/.vim/local/.vimrc_local_post')
