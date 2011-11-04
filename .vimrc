@@ -33,6 +33,9 @@ set nocompatible
 syntax on
 set showmatch 
 
+" color
+colorscheme desert
+
 " backspace
 noremap ^? ^H
 noremap! ^? ^H
