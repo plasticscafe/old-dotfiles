@@ -26,6 +26,7 @@ NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
+NeoBundle 'https://github.com/motemen/git-vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
