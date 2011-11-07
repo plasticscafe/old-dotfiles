@@ -71,6 +71,7 @@ let g:unite_abbr_highlight = 'StatusLine'
 nnoremap <silent> <leader>ub :<C-u>Unite buffer<CR>
 " file 
 nnoremap <silent> <leader>uf :<C-u>Unite file<CR>
+nnoremap <silent> <leader>um :<C-u>Unite file_mru<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimshell
