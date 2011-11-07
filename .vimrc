@@ -67,6 +67,10 @@ let g:neocomplcache_enable_underbar_completion = 1
 "
 let g:unite_cursor_line_highlight = 'Search'
 let g:unite_abbr_highlight = 'StatusLine'
+" buffer
+nnoremap <silent> <leader>ub :<C-u>Unite buffer<CR>
+" file 
+nnoremap <silent> <leader>uf :<C-u>Unite file<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimshell
