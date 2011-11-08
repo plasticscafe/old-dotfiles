@@ -26,7 +26,8 @@ NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
-NeoBundle 'https://github.com/motemen/git-vim.git'
+NeoBundle 'git://github.com/motemen/git-vim.git'
+NeoBundle 'git://github.com/leshill/vim-json.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
@@ -52,6 +53,7 @@ set laststatus=2
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal noexpandtab
 autocmd FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 " display Hard tab
 set list listchars=tab:>-
