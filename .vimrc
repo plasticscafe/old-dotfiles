@@ -28,6 +28,10 @@ NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
 NeoBundle 'git://github.com/motemen/git-vim.git'
 NeoBundle 'git://github.com/leshill/vim-json.git'
+NeoBundle 'git://github.com/digitaltoad/vim-jade.git'
+NeoBundle 'git://github.com/tpope/vim-haml.git'
+NeoBundle 'git://github.com/groenewege/vim-less.git'
+NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
@@ -77,9 +81,9 @@ let g:unite_abbr_highlight = 'StatusLine'
 " buffer
 nnoremap <silent> <leader><C-u>b :<C-u>Unite buffer<CR>
 " file 
-nnoremap <silent> <leader><C-u>ft :<C-u>Unite file<CR>
-nnoremap <silent> <leader><C-u>fm :<C-u>Unite file_mru<CR>
-nnoremap <silent> <leader><C-u>fr :<C-u>Unite file_rec<CR>
+nnoremap <silent> <leader><C-u>f :<C-u>Unite file<CR>
+nnoremap <silent> <leader><C-u>m :<C-u>Unite file_mru<CR>
+nnoremap <silent> <leader><C-u>r :<C-u>Unite file_rec<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimshell
