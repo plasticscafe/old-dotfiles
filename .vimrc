@@ -33,6 +33,7 @@ NeoBundle 'git://github.com/digitaltoad/vim-jade.git'
 NeoBundle 'git://github.com/tpope/vim-haml.git'
 NeoBundle 'git://github.com/groenewege/vim-less.git'
 NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
+NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
