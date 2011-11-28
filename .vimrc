@@ -55,6 +55,9 @@ set backspace=2
 set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}][LINE:%l/%L]
 set laststatus=2 
 
+" file type
+au! BufRead,BufNewFile *.json set filetype=json 
+
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal noexpandtab
