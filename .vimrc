@@ -57,12 +57,14 @@ set laststatus=2
 
 " file type
 au! BufRead,BufNewFile *.json set filetype=json 
+au! BufRead,BufNewFile *.coffee set filetype=coffee
 
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal noexpandtab
 autocmd FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType coffee setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 " display Hard tab
 set list listchars=tab:>-
