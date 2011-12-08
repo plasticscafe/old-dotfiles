@@ -33,6 +33,7 @@ NeoBundle 'git://github.com/digitaltoad/vim-jade.git'
 NeoBundle 'git://github.com/tpope/vim-haml.git'
 NeoBundle 'git://github.com/groenewege/vim-less.git'
 NeoBundle 'git://github.com/plasticscafe/vim-less-autocompile.git'
+NeoBundle 'git://github.com/plasticscafe/vim-jade-autocompile.git'
 NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,6 +111,16 @@ let g:vimshell_right_prompt = 'strftime("%Y/%m/%d %H:%M:%S")'
 " vim-coffee-script
 "
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-less-autocompile
+"
+let g:less_autocompile = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-jade-autocompile
+"
+"let g:jade_autocompile = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Personal Script
