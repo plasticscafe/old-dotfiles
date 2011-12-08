@@ -105,6 +105,11 @@ let g:vimshell_user_prompt = 'getcwd()'
 let g:vimshell_right_prompt = 'strftime("%Y/%m/%d %H:%M:%S")'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-coffee-script
+"
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Personal Script
 "
 
