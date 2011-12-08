@@ -60,6 +60,7 @@ set laststatus=2
 au! BufRead,BufNewFile *.json set filetype=json 
 au! BufRead,BufNewFile *.coffee set filetype=coffee
 au! BufRead,BufNewFile *.less set filetype=less
+au! BufRead,BufNewFile *.jade set filetype=jade
 au! BufRead,BufNewFile *.vimrc set filetype=vim
 
 " tab setting
@@ -69,6 +70,7 @@ autocmd FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidt
 autocmd FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType coffee setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType less setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType jade setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType vim setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 " display Hard tab
