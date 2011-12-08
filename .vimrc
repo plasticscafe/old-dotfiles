@@ -32,6 +32,7 @@ NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/digitaltoad/vim-jade.git'
 NeoBundle 'git://github.com/tpope/vim-haml.git'
 NeoBundle 'git://github.com/groenewege/vim-less.git'
+NeoBundle 'git://github.com/plasticscafe/vim-less-autocompile.git'
 NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,6 +59,8 @@ set laststatus=2
 " file type
 au! BufRead,BufNewFile *.json set filetype=json 
 au! BufRead,BufNewFile *.coffee set filetype=coffee
+au! BufRead,BufNewFile *.less set filetype=less
+au! BufRead,BufNewFile *.vimrc set filetype=vim
 
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
@@ -65,6 +68,8 @@ autocmd FileType html setlocal noexpandtab
 autocmd FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType coffee setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType less setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType vim setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 " display Hard tab
 set list listchars=tab:>-
@@ -98,6 +103,10 @@ nnoremap <silent> <leader>tr :<C-u>Unite file_rec<CR>
 let g:vimshell_prompt = '% '
 let g:vimshell_user_prompt = 'getcwd()'
 let g:vimshell_right_prompt = 'strftime("%Y/%m/%d %H:%M:%S")'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Personal Script
+"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting post load
