@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting pre load
-if filereadable($HOME . '/.vim/local/.vimrc_local_pre')
-    source ~/.vim/local/.vimrc_local_pre
+if filereadable($HOME . '/.vimrc_local_pre')
+    source ~/.vimrc_local_pre
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neobundle setting
@@ -129,6 +129,6 @@ let g:less_autocompile = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " local setting post load
 "
-if filereadable($HOME . '/.vim/local/.vimrc_local_post')
-    source ~/.vim/local/.vimrc_local_post
+if filereadable($HOME . '/.vimrc_local_post')
+    source ~/.vimrc_local_post
 endif
