@@ -36,6 +36,7 @@ NeoBundle 'git://github.com/plasticscafe/vim-less-autocompile.git'
 NeoBundle 'git://github.com/plasticscafe/vim-jade-autocompile.git'
 NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
+NeoBundle 'git://github.com/vim-scripts/Align.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
