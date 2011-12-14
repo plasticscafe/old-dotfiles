@@ -118,11 +118,13 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 " vim-less-autocompile
 "
 let g:less_autocompile = 1
+"let g:less_compress = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-jade-autocompile
 "
 "let g:jade_autocompile = 1
+"let g:jade_compress = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Personal Script
