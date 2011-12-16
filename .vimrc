@@ -1,9 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" local setting pre load
-if filereadable($HOME . '/.vimrc_local_pre')
-    source ~/.vimrc_local_pre
-endif
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neobundle setting
 "
 if has('vim_starting')
@@ -129,10 +124,15 @@ let g:less_autocompile = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Personal Script
 "
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" local setting post load
-"
-if filereadable($HOME . '/.vimrc_local_post')
-    source ~/.vimrc_local_post
-endif
+" Load settings for each location.
+" http://vim-users.jp/2009/12/hack112/
+augroup vimrc-local
+  autocmd!
+  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
+augroup END
+function! s:vimrc_local(loc)
+  let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
+  for i in reverse(filter(files, 'filereadable(v:val)'))
+    source `=i`
+  endfor
+endfunction
