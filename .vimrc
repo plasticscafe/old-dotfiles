@@ -55,21 +55,21 @@ set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}][LINE:%l/%L]
 set laststatus=2 
 
 " file type
-au! BufRead,BufNewFile *.json set filetype=json 
-au! BufRead,BufNewFile *.coffee set filetype=coffee
-au! BufRead,BufNewFile *.less set filetype=less
-au! BufRead,BufNewFile *.jade set filetype=jade
-au! BufRead,BufNewFile *.vimrc set filetype=vim
+au BufRead,BufNewFile *.json set filetype=json 
+au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile *.less set filetype=less
+au BufRead,BufNewFile *.jade set filetype=jade
+au BufRead,BufNewFile *.vimrc set filetype=vim
 
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
-autocmd FileType html setlocal noexpandtab
-autocmd FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType coffee setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType less setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType jade setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType vim setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html setlocal noexpandtab
+au FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType coffee setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType less setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType jade setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType vim setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 " display Hard tab
 set list listchars=tab:>-
@@ -124,11 +124,14 @@ let g:less_autocompile = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Personal Script
 "
-" Load settings for each location.
+if filereadable($HOME . '/.vimrc.local')
+    source ~/.vimrc.local
+endif
+" Load settings for each working location.
 " http://vim-users.jp/2009/12/hack112/
 augroup vimrc-local
   autocmd!
-  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
+  autocmd BufNewFile,BufReadPost * nested call s:vimrc_local(expand('<afile>:p:h'))
 augroup END
 function! s:vimrc_local(loc)
   let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
