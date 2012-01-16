@@ -33,6 +33,11 @@ NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/vim-scripts/Align.git'
 NeoBundle 'git://github.com/vim-jp/vimdoc-ja.git'
+" http://d.hatena.ne.jp/guyon/20120114/1326549125
+NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
+NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
+NeoBundle 'git://github.com/mortice/taglist.vim.git'
+NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
