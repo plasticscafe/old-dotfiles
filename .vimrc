@@ -38,6 +38,7 @@ NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
 NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
 NeoBundle 'git://github.com/mortice/taglist.vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'git://github.com/pekepeke/titanium-vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
