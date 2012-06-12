@@ -38,6 +38,7 @@ NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
 NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
 NeoBundle 'git://github.com/mortice/taglist.vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'git://github.com/pekepeke/unite-fileline.git'
 NeoBundle 'git://github.com/pekepeke/titanium-vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
@@ -90,6 +91,12 @@ au BufRead,BufNew * match JpSpace /　/
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
+
+
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.coffee = '[^. \t]\.\%(\h\w*\)\?'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " unite
