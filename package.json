@@ -1,0 +1,14 @@
+{
+  "name": "plasticscafe env"
+  ,"version": "0.0.1"
+  ,"engines": { "node": "" }
+  ,"author": "plasticscafe"
+  ,"dependencies": {
+    "coffee-script": ""
+    ,"mocha": ""
+    ,"stylus": ""
+    ,"should": ""
+    ,"node-inspector": ""
+    ,"node-dev": ""
+  }
+}
