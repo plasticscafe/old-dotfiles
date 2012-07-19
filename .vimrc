@@ -27,8 +27,10 @@ NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/digitaltoad/vim-jade.git'
 NeoBundle 'git://github.com/tpope/vim-haml.git'
 NeoBundle 'git://github.com/groenewege/vim-less.git'
+NeoBundle 'git://github.com/wavded/vim-stylus.git'
 NeoBundle 'git://github.com/plasticscafe/vim-less-autocompile.git'
 NeoBundle 'git://github.com/plasticscafe/vim-jade-autocompile.git'
+NeoBundle 'git://github.com/plasticscafe/vim-stylus-autocompile.git'
 NeoBundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/vim-scripts/Align.git'
@@ -38,6 +40,7 @@ NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
 NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
 NeoBundle 'git://github.com/mortice/taglist.vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'git://github.com/pekepeke/unite-fileline.git'
 NeoBundle 'git://github.com/pekepeke/titanium-vim.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
@@ -63,6 +66,7 @@ set laststatus=2
 " file type
 au BufRead,BufNewFile *.json set filetype=json 
 au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile *.styl set filetype=stylus
 au BufRead,BufNewFile *.less set filetype=less
 au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile *.vimrc set filetype=vim
@@ -73,6 +77,7 @@ au FileType html setlocal noexpandtab
 au FileType javascript setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType coffee setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType stylus setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType less setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType jade setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType vim setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
@@ -90,6 +95,12 @@ au BufRead,BufNew * match JpSpace /　/
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
+
+
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.coffee = '[^. \t]\.\%(\h\w*\)\?'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " unite
@@ -116,9 +127,15 @@ let g:vimshell_right_prompt = 'strftime("%Y/%m/%d %H:%M:%S")'
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-stylus-autocompile
+"
+let g:stylus_autocompile = 1
+"let g:stylus_compress = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-less-autocompile
 "
-let g:less_autocompile = 1
+"let g:less_autocompile = 1
 "let g:less_compress = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
