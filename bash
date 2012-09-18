@@ -1,3 +1,7 @@
+##############################
+# for .bashrc
+# source ~/.dotfiles/bash
+##############################
 source ~/.dotfiles/git/git-completion.sh
 source ~/.dotfiles/git/git-prompt.sh
 
