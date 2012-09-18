@@ -1,0 +1,20 @@
+[user]
+    name = plasticscafe
+    email = plasticscafe@gmail.com
+[alias]
+    nffmerge = merge --no-ff
+    co = checkout
+    ci = commit
+    st = status
+    di = diff
+    br = branch
+[color]
+    diff = auto
+    ui   = auto
+[status]
+    diff = auto
+[branch]
+    diff = auto
+[branch "master"]
+    mergeoptions = “–no-ff”
+    rebase = true
