@@ -42,6 +42,8 @@ NeoBundle 'git://github.com/mortice/taglist.vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/pekepeke/unite-fileline.git'
 NeoBundle 'git://github.com/pekepeke/titanium-vim.git'
+NeoBundle 'git://github.com/mattn/webapi-vim.git'
+NeoBundle 'git://github.com/derekwyatt/vim-scala.git'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic setting
 "
