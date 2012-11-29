@@ -72,6 +72,7 @@ au BufRead,BufNewFile *.styl set filetype=stylus
 au BufRead,BufNewFile *.less set filetype=less
 au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile *.vimrc set filetype=vim
+au BufRead,BufNewFile *.scala set filetype=scala
 
 " tab setting
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
